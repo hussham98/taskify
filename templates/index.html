@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form action="{{ url_for('add_task') }}" method="post">
+            <input class="task-input" type="text" name="task" placeholder="Add a new task" required>
+            <input class="date-input" type="date" name="due_date">
+            <button class="task-input-btn" type="submit">Add Task</button>
+        </form>
+        <form action="{{ url_for('search_task') }}" method="get">
+            <input class="search-input" type="text" name="query" placeholder="Search tasks">
+            <button class="search-input-btn" type="submit">Search</button>
+        </form>
+        <ul class="task-list">
+            {% for task in tasks %}
+                <li class="task-item">
+                    <input class="task-checkbox" type="checkbox" {% if task.completed %}checked{% endif %} onclick="completeTask({{ loop.index0 }})">
+                    <span>{{ task.task }}</span>
+                    {% if task.due_date %}
+                        <span class="due-date">Due: {{ task.due_date }}</span>
+                    {% endif %}
+                    
+                    <a href="{{ url_for('delete_task', index=loop.index0) }}">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        function completeTask(index) {
+            window.location.href = '/complete/' + index;
+        }
+    </script>
+</body>
+</html>

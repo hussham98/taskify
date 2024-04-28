@@ -1,0 +1,74 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.task-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: calc(100% - 160px); /* Adjusted width to accommodate buttons */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.date-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.task-input-btn {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-input-btn:hover {
+    background-color: #555;
+}
+
+.search-input {
+    margin-top: 10px;
+    padding: 5px;
+    width: calc(100% - 120px); /* Adjusted width to accommodate buttons */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-input-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-input-btn:hover {
+    background-color: #555;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    margin-bottom: 10px;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.due-date {
+    margin-left: 10px;
+    color: #999;
+}
