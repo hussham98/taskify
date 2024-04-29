@@ -19,7 +19,8 @@ Taskify is a basic web application built using Flask and Python for managing tas
    git clone <repository_url>
 2. Navigate to the project directory:
    ```bash
-   cd taskify```
+   cd taskify
+   ```
 
 3. Install Dependencies:
 
