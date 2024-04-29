@@ -54,6 +54,7 @@ def search_task():
     results = [task for task in tasks if query.lower() in task['task'].lower()]
     return render_template('search_result.html', query=query, results=results)
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use the assigned port from Heroku or default to 5000 for local development
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
