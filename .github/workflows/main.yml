@@ -31,5 +31,5 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-        heroku_app_name: "taskify-flask"  # Replace with your Heroku app name
-        branch: main  # Specify the branch to deploy
+        heroku_app_name: "taskify-flask" # Replace with your Heroku app name
+        heroku_email: "md.hussam.1@gmail.com"
